@@ -1,0 +1,36 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+#toolbar {
+  padding: 10px;
+  background: #ddd;
+  text-align: center;
+}
+.dark #toolbar {
+  background: #222;
+  color: white;
+}
+canvas {
+  display: block;
+  background: #f0f0f0;
+}
+.dark canvas {
+  background: #111;
+}
+.skill-node {
+  position: absolute;
+  background: white;
+  padding: 8px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  cursor: move;
+  width: 120px;
+  text-align: center;
+}
+.dark .skill-node {
+  background: #333;
+  color: white;
+  border-color: white;
+}

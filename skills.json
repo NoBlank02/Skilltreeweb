@@ -1,0 +1,18 @@
+[{
+  "id": "ignite",
+  "name": "Ignite",
+  "description": "Start a small flame.",
+  "x": 100,
+  "y": 100,
+  "evolves_to": ["fireball"],
+  "shape": "square"
+},
+{
+  "id": "fireball",
+  "name": "Fireball",
+  "description": "Throw a fireball.",
+  "x": 400,
+  "y": 200,
+  "evolves_to": [],
+  "shape": "circle"
+}]

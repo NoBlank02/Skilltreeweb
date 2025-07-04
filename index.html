@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Advanced Skill Tree Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="toolbar">
+    <button onclick="addSkill()">➕ Add Skill</button>
+    <button onclick="saveSkills()">💾 Save</button>
+    <button onclick="toggleDarkMode()">🌙 Dark Mode</button>
+    <input type="file" id="loadFile" onchange="loadSkills(event)">
+  </div>
+  <canvas id="canvas" width="2000" height="2000"></canvas>
+  <script src="script.js"></script>
+</body>
+</html>
