@@ -6,13 +6,48 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div id="main-menu">
+    <button onclick="switchView('tree')">🌳 Systems</button>
+    <button onclick="switchView('calculator')">🧮 Calculator</button>
+    <button onclick="switchView('ai')">🤖 AI Assistant</button>
+    <button onclick="switchView('database')">📁 Personal DB</button>
+  </div>
+
+  <div id="tree-view" class="view active">
+    <div id="toolbar">
+      <button onclick="addSkill()">➕ Add Skill</button>
+      <button onclick="undo()">↩️ Undo</button>
+      <button onclick="redo()">↪️ Redo</button>
+      <button onclick="zoomIn()">🔍+</button>
+      <button onclick="zoomOut()">🔍-</button>
+      <button onclick="createNewSystem()">🆕 New System</button>
+      <select id="systemSelector" onchange="loadSystem(this.value)"></select>
+    </div>
+    <canvas id="canvas" width="3000" height="3000"></canvas>
+  </div>
+
+  <div id="calculator-view" class="view">Coming Soon: Calculator</div>
+  <div id="ai-view" class="view">Coming Soon: AI Assistant</div>
+  <div id="database-view" class="view">
+    <input type="file" multiple onchange="handleFileUpload(event)">
+    <ul id="file-list"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
   <div id="toolbar">
     <button onclick="addSkill()">➕ Add Skill</button>
     <button onclick="saveSkills()">💾 Save</button>
     <button onclick="toggleDarkMode()">🌙 Dark Mode</button>
     <input type="file" id="loadFile" onchange="loadSkills(event)">
-  </div>
-  <canvas id="canvas" width="2000" height="2000"></canvas>
+  </div>  <canvas id="canvas" width="2000" height="2000"></canvas>
   <script src="script.js"></script>
 </body>
 </html>
+<input type="text" id="searchBar" placeholder="Search skills..." oninput="searchSkill(this.value)">
+
+<button onclick="clearTree()">🗑️ Clear</button>
+
+<button onclick="toggleConnectMode()">🔗 Connect</button>
+

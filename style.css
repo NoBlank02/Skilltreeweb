@@ -3,6 +3,19 @@ body {
   margin: 0;
   padding: 0;
 }
+#main-menu {
+  background: #333;
+  color: white;
+  padding: 5px;
+  display: flex;
+  justify-content: space-around;
+}
+#main-menu button {
+  background: #444;
+  color: white;
+  border: none;
+  padding: 10px;
+}
 #toolbar {
   padding: 10px;
   background: #ddd;
@@ -13,11 +26,19 @@ body {
   color: white;
 }
 canvas {
+  border: 1px solid #ccc;
   display: block;
   background: #f0f0f0;
 }
 .dark canvas {
   background: #111;
+}
+view {
+  display: none;
+}
+
+.view.active {
+  display: block;
 }
 .skill-node {
   position: absolute;
@@ -33,4 +54,24 @@ canvas {
   background: #333;
   color: white;
   border-color: white;
+}
+.context-menu {
+  position: absolute;
+  background: white;
+  border: 1px solid #000;
+  z-index: 1000;
+  padding: 5px;
+  font-size: 14px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+.context-menu button {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 6px;
+}
+.context-menu button:hover {
+  background: #f0f0f0;
 }
